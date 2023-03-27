@@ -83,7 +83,6 @@ const readingError = (res) => {
 }
 
 const handleRoute = (file, res) => {
-	console.log(file)
 	if (file.contentType.includes('image') && cache[file.path]) {
 		// Serve the cached image
 		res.writeHead(200, { 'Content-Type': file.contentType });
